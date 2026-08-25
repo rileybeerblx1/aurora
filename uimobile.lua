@@ -1,3 +1,14 @@
+-- envs
+getgenv().identifyexecutor = function()
+    return "Aurora", "1.0.0"
+end
+getgenv().getthreadidentity = function()
+    return 8
+end
+local name, version = identifyexecutor()
+print(name, version)
+
+--wha
 if game.CoreGui:FindFirstChild('AuroraUI') then
 	game.CoreGui.AuroraUI:Destroy()
 end
