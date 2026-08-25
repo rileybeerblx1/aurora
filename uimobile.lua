@@ -2406,7 +2406,7 @@ site.Image='rbxassetid://98369329844510'
 site.BackgroundTransparency=1
 site.AnchorPoint=Vector2.new(1,1)
 site.MouseButton1Click:Connect(function()
- game:GetService("GuiService"):BroadcastNotification('{"presentationStyle":2,"url":"https://getaurora.vercel.app","title":"AuroraUI","visible":true}', 20)
+ game:GetService("GuiService"):BroadcastNotification('{"presentationStyle":2,"url":"https://getaurora.pages.dev","title":"AuroraUI","visible":true}', 20)
 end)
 local youtube=Instance.new('ImageButton',Frame)
 youtube.Size=p(0.03,0,0.15)
