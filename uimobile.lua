@@ -9,8 +9,8 @@ local name, version = identifyexecutor()
 print(name, version)
 
 --wha
-if game.CoreGui:FindFirstChild('AuroraUI') then
-	game.CoreGui.AuroraUI:Destroy()
+if (gethui and gethui() or game.CoreGui or game.Players.LocalPlayer.PlayerGui):FindFirstChild("AuroraUI") then
+	(gethui and gethui() or game.CoreGui or game.Players.LocalPlayer.PlayerGui).AuroraUI:Destroy()
 end
 local AuroraUI = Instance.new("ScreenGui")
 AuroraUI.DisplayOrder = 3
@@ -1389,7 +1389,7 @@ open.Size = UDim2.new(0, 25, 0, 25)
 open.Visible = false
 open.Name = "open"
 
-AuroraUI.Parent = game.CoreGui
+AuroraUI.Parent = (gethui and gethui()) or game:GetService("CoreGui") or game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
 sidebarframe.Parent = AuroraUI
 sidebar.Parent = sidebarframe
 tabs.Parent = sidebar
